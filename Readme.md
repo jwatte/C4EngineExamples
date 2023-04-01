@@ -15,7 +15,7 @@ The  C4-Engine CMake template offers several features that ease the development 
 ## How to compile the examples and use the CMake template
 1. Decide if you want to make the C4 Engine code a part of your project. 
     * If you plan to share your application source code publicly or with entities that do not hold a C4 license, then you are probably not allowed to make the C4-Engine code and resources part of it; or If you do not plan to modify the C4 Engine code, then you can place the Engine Code and Data at any accessible location and possibly share it amongst your projects.
-    * If you plan to modify the C4 code as part of your project, then it is advisable to copy the Engine Code and Data to a location in your source directory. It allows for source versioning control and makes it easy for IDEs to detect the source files. Your project folder structure will then look like this:
+    * If you plan to modify the C4 code as part of your project, then it is advisable to copy the Engine Code and Data to a location in your source directory. It allows source versioning control and makes it easy for IDEs to detect the source files. Your project folder structure will then look like this:
 ```
             |v MyGame
               |> cmake
@@ -28,7 +28,7 @@ The  C4-Engine CMake template offers several features that ease the development 
               | Readme.md
               | ...
  ```
- 2. Set the C4CodeRoot and C4DataRoot in your IDE or through the CMake command to point to the C4 root folder. The contents of the two folders (code and data) can be merged; in this case both variables can be set to something like `C:\users\john\source\MyGame\C4Engine`.   
+ 2. Set the C4CodeRoot and C4DataRoot in your IDE or through the CMake command to point to the C4 root folder. The contents of the two folders (code and data) can be merged; in this case, both variables can be set to something like `C:\users\john\source\MyGame\C4Engine`.   
  3. Run CMake to generate the project
  4. Compile
  5. Run
@@ -70,8 +70,8 @@ The currently available examples are shown in the table below.
 | 008_adding_geometry_with_collision_programmatically | Demonstration on how to programmatically add geometry with collision. |
 | 009_custom_controller | A custom controller used to rotate geometry that has collision enabled. |
 | 010_node_iterator | A node iterator that can be used in c++ range-based loops. |
-| 011_user_controlled_object | A tiny space city with a user controlled spacecraft. |
-| 012_texture | Texturing example and automated asset import using cmake targets. |
+| 011_user_controlled_object | A tiny space city with a user-controlled spacecraft. |
+| 012_texture | Texturing example and automated asset import using CMake targets. |
 | 013_terrain | In progress....|
 
 ## Changing the current application
