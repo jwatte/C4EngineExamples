@@ -238,9 +238,9 @@ void SpaceShipController::MoveController( )
 }
 
 SpaceShipController::SpaceShipController( const SpaceShipController &other ):
-    Controller      ( kControllerSpaceShip ),
-    rollRotationRate_   ( other.rollRotationRate_ ),
-    pitchRotationRate_ (other.pitchRotationRate_)
+    Controller( kControllerSpaceShip ),
+    rollRotationRate_( other.rollRotationRate_ ),
+    pitchRotationRate_(other.pitchRotationRate_)
 {
 
 }
