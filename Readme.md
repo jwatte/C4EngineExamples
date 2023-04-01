@@ -1,7 +1,7 @@
 # C4Engine engine worked examples
-
-# Why a CMake template
-The reasons that motivated developing a CMake template are (a) Enabling code sharing in a way that makes compilation and execution of user applications an easy task; This is currently not easy with the C4 Engine because one needs to respect its license and the introduction of other source code involves many manual steps (b) Automate a number of bulding tasks, (c) Enable easier team-working by disengaging certain parts of the engine. 
+This is a collection of basic examples for C4Engine (https://c4engine.com/). The examples are replacing the default Visual Studio solution with a CMake based build system.
+## Why a CMake template
+Besides CMake being the build tool I am mostly familiar with, there are some additional reasons that motivated developing a CMake based toolchain. These are: (a) Enabling code sharing in a way that makes compilation and execution of user applications an easy task; This is currently not easy with the C4 Engine because one needs to respect its license and the introduction of other source code involves many manual steps (b) Automate a number of bulding tasks, (c) Enable easier team-working by disengaging certain parts of the engine, and (d) CMake appears to becoming the defacto C++ build tool: it is supported by most IDEs, and is very popular within the C++ user community.
 
 ## C4Engine CMake template 
 The C4Engine engine CMake template offers a number of features that ease the development of applications, particularly for people used to working with CMake. The template:
@@ -29,7 +29,7 @@ The C4Engine engine CMake template offers a number of features that ease the dev
               | Readme.md
               | ...
  ```
- 2. Set the C4CodeRoot and C4DataRoot IN your IDE, or through the cmake command to point to the C4 root folder.The contents of each of the folders can be merged and defined for example to `C:\users\john\source\NextSkyrim\C4Engine`   
+ 2. Set the C4CodeRoot and C4DataRoot in your IDE, or through the cmake command to point to the C4 root folder.The contents of each of the folders can be merged and defined for example to `C:\users\john\source\MyGame\C4Engine`   
  3. Run cmake to generate the project
  4. Compile
  5. Run
