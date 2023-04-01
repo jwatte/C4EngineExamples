@@ -28,7 +28,7 @@ The  C4-Engine CMake template offers several features that ease the development 
               | Readme.md
               | ...
  ```
- 2. Set the C4CodeRoot and C4DataRoot in your IDE or through the CMake command to point to the C4 root folder. The contents of each folder can be merged and defined, for example, to `C:\users\john\source\MyGame\C4Engine`.   
+ 2. Set the C4CodeRoot and C4DataRoot in your IDE or through the CMake command to point to the C4 root folder. The contents of the two folders (code and data) can be merged; in this case both variables can be set to something like `C:\users\john\source\MyGame\C4Engine`.   
  3. Run CMake to generate the project
  4. Compile
  5. Run
