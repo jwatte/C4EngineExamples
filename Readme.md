@@ -54,5 +54,25 @@ There are several selectable options, although using the defaults is usually pre
 | `C4UseNSIS`                |    `false`   | Use NSIS to create an installer. If `false`, use zip to create a bundled app.                                                                                                                                                                                                                                       |
 
 In Visual Studio, the items above can be changed by accessing the `Configuration` drop-down menu and selecting `Manage Configurations`. Then after making the desired change and saving the .json file, CMake will be reconfigured.
+
+# List of examples
+The currently available examples are shown in the table below.
+
+| Name                       |    Description                                                                                                                                                                                                                                                                                                      |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 001_simple                 |    A basic example that contains a very simple world. Demonstrates basic concepts, such as finding a spectator marker, placing the camera, and setting up basic input  |
+| 002_text_display           |    Demonstrates how to display some static text on the screen. |
+| 003_start_window           |    A basic menu using C4Engine's panels. The user can click to start the game. |
+| 004_improved_start_window  |    An improved menu where the user can start, resume or quit the game. |
+| 005_physics_and_collision  |    A world with basic physics and collision. |
+| 006_simple_shader          |    A simple procedural shader. |
+| 007_simple_animated_shader |    An animated procedural shader. |
+| 008_adding_geometry_with_collision_programmatically | Demonstration on how to programmatically add geometry with collision. |
+| 009_custom_controller | A custom controller used to rotate geometry that has collision enabled. |
+| 010_node_iterator | A node iterator that can be used in c++ range-based loops. |
+| 011_user_controlled_object | A tiny space city with a user controlled spacecraft. |
+| 012_texture | Texturing example and automated asset import using cmake targets. |
+| 013_terrain | In progress....|
+
 ## Changing the current application
 To change the active application, modify the `C4ActiveApp` variable and reconfigure CMake. CMake will update the game.cfg file and other directories and files that may need to be changed. 
