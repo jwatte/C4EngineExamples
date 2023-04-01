@@ -19,7 +19,7 @@ The  C4-Engine CMake template offers several features that ease the development 
 4. Enables projects to enclose their source code and resources fully; no folders are shared between the Engine, Tools, and user projects.
 5. Enables easy setup of new applications. Configuring multiple files manually is unnecessary; just clone the project-specific files. 
 6. Allows multiple projects to share the same C4Engine source code and C4Engine resources.
-7. Offers automatic installer generation based on NSIS ( Nullsoft Scriptable Install System).
+7. Offers automatic installer generation based on NSIS ( Nullsoft Scriptable Install System), or bundle into a zip archive. The installer is compatible with C4-Engine pack files.
 
 ## How to compile the examples and use the CMake template
 1. Decide if you want to make the C4 Engine code a part of your project. 
