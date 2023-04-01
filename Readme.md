@@ -58,4 +58,4 @@ There are several selectable options, alhthough using the defaults is usually pr
 
 In Visual Studio the items above can be changed by accessing the `Configuration` drop down menu and selecting `Manage Configurations`. Then after making the desired change and saving the .json file, cmake will be reconfigured.
 ## Changing the current application
-To change the active application, modify the `C4ActiveApp` variable and re-configure cmake. This will update the game.cfg file, but also other directories and files that may need to be modified. 
+To change the active application, modify the `C4ActiveApp` variable and re-configure CMake. This will update the game.cfg file, but also other directories and files that may need to be modified. 
