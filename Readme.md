@@ -1,5 +1,5 @@
-# C4-Engine worked examples
-This repository is a collection of basic examples for C4Engine (https://c4engine.com/). CMake is used to replace the default C4Engine Visual Studio solution.
+# C4-Engine 7.0 worked examples
+This repository is a collection of basic examples for C4Engine v7.0 (https://c4engine.com/).
 
 <div align="center">
 <p float="center">
