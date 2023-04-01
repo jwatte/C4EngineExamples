@@ -72,7 +72,8 @@ if (EXISTS ${FromPath}/${Level1Folder}/${Level2Folder} )
 			endif()
 	endif()
 else( )
-    message( FATAL_ERROR "C4Engine ${Level1Folder}/${Level2Folder} not found. Please set the C4DataRoot cmake variable to point to the top-level of C4 Engine data directory." )
+    message( FATAL_ERROR "C4Engine ${Level1Folder}/${Level2Folder} not found. Please set the C4DataRoot cmake variable to point to the top-level of C4 Engine data directory. Variable currently set to: " ${C4DataRoot}  )
+
 endif( )
 endfunction( C4CopyOrLink)
 

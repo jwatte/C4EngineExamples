@@ -1,3 +1,11 @@
+# Folders
+.vs
+build
+out
+
+# Build tool files
+CMakeSettings.json
+
 # Prerequisites
 *.d
 
