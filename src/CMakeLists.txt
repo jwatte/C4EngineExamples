@@ -11,7 +11,7 @@ add_subdirectory( 009_custom_controller )
 add_subdirectory( 010_node_iterator )
 add_subdirectory( 011_user_controlled_object )
 add_subdirectory( 012_texture )
-add_subdirectory( 013_terrain )
+#add_subdirectory( 013_terrain )
 
 #if ( C4BuildThe31st )
 #	add_subdirectory( 999_tdgame )
