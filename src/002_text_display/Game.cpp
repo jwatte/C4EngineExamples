@@ -17,7 +17,7 @@ Game::Game() :
     upAction        (kActionUp,         kSpectatorMoveUp ),
     downAction      (kActionDown,       kSpectatorMoveDown ),
 
-    text( Vector2D(240.0F, 32.0F), "My Game my rules." )
+    text( Vector2D(240.0F, 32.0F), "Example Text." )
 {
     TheInputMgr->AddAction( &forwardAction );
     TheInputMgr->AddAction( &backwardAction );
