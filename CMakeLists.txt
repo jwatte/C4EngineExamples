@@ -21,8 +21,3 @@ configure_file( ${C4CMakeDir}/game.cfg.in ${C4ProgramRootDir}/Data/Engine/game.c
 include( cmake/setup_installer.cmake )
 
 include( cmake/compute_and_display_build_setup.cmake )
-
-
-message(${CMAKE_BINARY_DIR}/ )
-message(${C4CodeRoot})
-#C4CreateSymlink( ${C4CodeRoot}/ ${CMAKE_BINARY_DIR}/C4CodeSymLink/ )
