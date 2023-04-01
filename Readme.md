@@ -4,7 +4,7 @@ This is a collection of basic examples for C4Engine (https://c4engine.com/). The
 Besides CMake being the build tool I am mostly familiar with, there are some additional reasons that motivated developing a CMake based toolchain. These are: (a) Enabling code sharing in a way that makes compilation and execution of user applications an easy task; This is currently not easy with the C4 Engine because one needs to respect its license and the introduction of other source code involves many manual steps (b) Automate a number of bulding tasks, (c) Enable easier team-working by disengaging certain parts of the engine, and (d) CMake appears to becoming the defacto C++ build tool: it is supported by most IDEs, and is very popular within the C++ user community.
 
 ## C4Engine CMake template 
-The C4Engine engine CMake template offers a number of features that ease the development of applications, particularly for people used to working with CMake. The template:
+The C4Engine  CMake template offers a number of features that ease the development of applications, particularly for developers used to working with CMake. The template:
 1. Provides a platform for sharing and team working on a C4Engine project yet honoring the sweat of the C4Engine engine developers by allowing easy compliance with the C4Engine license requirements.
 2. Offers non-intrusive access to the C4Engine source code.
 3. Provides automatic import of resources that have been modified, like textures and string files.
@@ -14,7 +14,7 @@ The C4Engine engine CMake template offers a number of features that ease the dev
 7. Offers automatic installer generation based on NSIS ( Nullsoft Scriptable Install System).
 
 ## How to use the template
-1. The hard part: Decide if you want to make the C4 Engine code a part of your project or not. 
+1.  Decide if you want to make the C4 Engine code a part of your project or not. 
     * If you plan to share your application source code publicly, or with entities that do not hold a C4 license then you are probably not allowed to make the C4 Engine code and resources part of it; or If you do not plan to modify the C4 Engine code then you can place the Engine Code and Data at any accesible location and possibly share it amongst your projects.
     * If you plan to modify the C4 Code as part of your project, then it is advisable to copy the Engine Code and Data in a location in your source directroy. The reasons for that is that it allows for source versioning control and makes it easy for IDEs to detect the source files. Your project folder structure will then look like:
 ```
@@ -34,9 +34,7 @@ The C4Engine engine CMake template offers a number of features that ease the dev
  4. Compile
  5. Run
  
- ## Example configuration using Visual Studio 2019
- 
-# User selectable options
+## User selectable options
 There are several selectable options, alhthough using the defaults is usually preferable. The `C4CodeRoot` and `C4DataRoot` are not optional and should point to the C4Engine main folder(s).
 
 | Name                       |   Default    | Description                                                                                                                                                                                                                                                                                                      |
