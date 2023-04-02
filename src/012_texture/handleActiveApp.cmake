@@ -24,11 +24,10 @@ if (${C4EnableBuildTimeImport})
 	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} ${ImportTextureFileName} C4LatestImportTarget)
 
 	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "wall_stone_021_diff" C4LatestImportTarget)
-	C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "wall_stone_021_nrml" C4LatestImportTarget)
+	C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "wall_stone_021_height" C4LatestImportTarget) # Will generate normal, parallax and horizon maps
 
 	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_diff" C4LatestImportTarget)
-	C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_nrml" C4LatestImportTarget)
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_height" C4LatestImportTarget)
+	C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_height" C4LatestImportTarget) # Will generate normal, parallax and horizon maps
 
 	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_left" C4LatestImportTarget)
 	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_right" C4LatestImportTarget)
