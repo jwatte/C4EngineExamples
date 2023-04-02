@@ -21,7 +21,7 @@ message( STATUS "Binary destination dir : " ${C4BinaryDestDir} )
 message( STATUS "Overrides of default C4 Engine options: " )
 
 if ( NOT C4InfiniteShadowResolution STREQUAL "0" )
-	message( STATUS "    > kInfiniteShadowResolution = " ${C4InfiniteShadowResolution})
+    message( STATUS "    > kInfiniteShadowResolution = " ${C4InfiniteShadowResolution})
 endif()
 
 message( STATUS "Applications to build  :" )

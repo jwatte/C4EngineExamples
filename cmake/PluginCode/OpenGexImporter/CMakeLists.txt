@@ -18,7 +18,7 @@ C4AddLibrary(
 )
 
 if ( ${C4InstallPlugins} )
-	install(TARGETS ${C4CurrentTargetName} DESTINATION bin/${AppDirectory}/Plugins/Tools/Importers )
+    install(TARGETS ${C4CurrentTargetName} DESTINATION bin/${AppDirectory}/Plugins/Tools/Importers )
 endif()
 
 

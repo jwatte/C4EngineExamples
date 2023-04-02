@@ -14,7 +14,7 @@ C4_MODULE_EXPORT C4::Application * CreateApplication( )
 // Custom controllers, script methods, models, input actions etc should be initialized and registered here.
 Game::Game() :
     // Create a string that can be associated to the ones in strings.txt
-	stringTable( APPNAME "/Game/gameStrings"),
+    stringTable( APPNAME "/Game/gameStrings"),
     spectatorLocatorRegistar(kLocatorSpectator, stringTable.GetString(StringID('LOCA', kLocatorSpectator))),
     
     forwardAction   (kActionForward,    kSpectatorMoveForward ),
@@ -24,7 +24,7 @@ Game::Game() :
     upAction        (kActionUp,         kSpectatorMoveUp ),
     downAction      (kActionDown,       kSpectatorMoveDown )
 {
-	// Add mapped input actions to the Input Manager
+    // Add mapped input actions to the Input Manager
     TheInputMgr->AddAction( &forwardAction );
     TheInputMgr->AddAction( &backwardAction );
     TheInputMgr->AddAction( &leftAction );
@@ -32,7 +32,7 @@ Game::Game() :
     TheInputMgr->AddAction( &upAction );
     TheInputMgr->AddAction( &downAction );
 
-	// Tell the world manager to create the world using our function CreateWorld
+    // Tell the world manager to create the world using our function CreateWorld
     TheWorldMgr->SetWorldCreator( &CreateWorld );
 
     // Tells the Interface Manager to automatically switch the input to the game
@@ -44,15 +44,15 @@ Game::Game() :
     // Load the simple world
     // Comment the following line if you would prefer to manually load a world
     // from the console with the load command or from the Editor(using Ctrl+P).
-	TheWorldMgr->LoadWorld(APPNAME "/World/simple");
+    TheWorldMgr->LoadWorld(APPNAME "/World/simple");
 }
 
 Game::~Game()
 {
-	// Unload the current world if still active
+    // Unload the current world if still active
     TheWorldMgr->UnloadWorld( );
 
-	TheWorldMgr->SetWorldCreator(nullptr);
+    TheWorldMgr->SetWorldCreator(nullptr);
 }
 
 // Returns a new instance of our custom class GameWorld that inherits from World

@@ -20,7 +20,7 @@ Game::Game() :
     downAction      (kActionDown,       kSpectatorMoveDown )
 {
 
-	// Add mapped input actions to the Input Manager
+    // Add mapped input actions to the Input Manager
     TheInputMgr->AddAction( &forwardAction );
     TheInputMgr->AddAction( &backwardAction );
     TheInputMgr->AddAction( &leftAction );

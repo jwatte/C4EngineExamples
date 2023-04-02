@@ -13,7 +13,7 @@ private:
     // Cameras are not defined in the World Editor. Instead Locators are. We
     // will use a special locator to set the camera in the PreprocessWorld
     // function
-	SpectatorCamera   spectatorCamera;
+    SpectatorCamera   spectatorCamera;
 
 public:
 

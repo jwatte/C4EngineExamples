@@ -21,20 +21,20 @@ GameWorld::~GameWorld()
 
 WorldResult GameWorld::PreprocessWorld( )
 {
-	WorldResult result = World::PreprocessWorld( );
-	if (result != kWorldOkay)
-	{
-		return (result);
-	}
+    WorldResult result = World::PreprocessWorld( );
+    if (result != kWorldOkay)
+    {
+        return (result);
+    }
 
-	// This will display a message in the console. Access it by pressing "~" on the keyboard
-	Engine::Report(String<>("Pre-processing world!")); 
+    // This will display a message in the console. Access it by pressing "~" on the keyboard
+    Engine::Report(String<>("Pre-processing world!")); 
 
 #pragma message( "Compiling ........" APPNAME )
 
     Engine::Report(String<>( APPNAME ));
 
-	// Set the active camera to our spectator camera
+    // Set the active camera to our spectator camera
     SetWorldCamera( &spectatorCamera );
 
     // Default camera setting if no spectator locator is defined in the world
@@ -46,27 +46,27 @@ WorldResult GameWorld::PreprocessWorld( )
     // This should have been defined in the world
     Marker *marker = GetRootNode()->GetFirstMarker( );
     while ( marker )
-	{
-		if ((marker->GetMarkerType() == kMarkerLocator) && (marker->NodeEnabled()))
-		{
+    {
+        if ((marker->GetMarkerType() == kMarkerLocator) && (marker->NodeEnabled()))
+        {
             const auto locator = static_cast<const LocatorMarker *>(marker);
             if (locator->GetLocatorType() == 'spec')
             {
-				// Ok, we found it. Position and orient our camera using this marker.
-				const Vector3D direction	= marker->GetWorldTransform()[0];
-                azimuth		= Arctan( direction.y, direction.x );
-                altitude	= Arctan( direction.z, Sqrt(direction.x * direction.x + direction.y * direction.y));
-                position	= marker->GetWorldPosition();
+                // Ok, we found it. Position and orient our camera using this marker.
+                const Vector3D direction    = marker->GetWorldTransform()[0];
+                azimuth        = Arctan( direction.y, direction.x );
+                altitude    = Arctan( direction.z, Sqrt(direction.x * direction.x + direction.y * direction.y));
+                position    = marker->GetWorldPosition();
                 break;
-			}
-		}
+            }
+        }
 
-		marker = marker->GetNextListElement();
-	}
+        marker = marker->GetNextListElement();
+    }
 
     spectatorCamera.SetCameraAzimuth(azimuth);
     spectatorCamera.SetCameraAltitude(altitude);
     spectatorCamera.SetNodePosition(position);
 
-	return (kWorldOkay);
+    return (kWorldOkay);
 }

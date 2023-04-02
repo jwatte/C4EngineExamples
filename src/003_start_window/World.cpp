@@ -18,11 +18,11 @@ GameWorld::~GameWorld()
 
 WorldResult GameWorld::PreprocessWorld( )
 {
-	WorldResult result = World::PreprocessWorld();
-	if (result != kWorldOkay)
-	{
-		return (result);
-	}
+    WorldResult result = World::PreprocessWorld();
+    if (result != kWorldOkay)
+    {
+        return (result);
+    }
 
     SetWorldCamera( &spectatorCamera );
 
@@ -32,26 +32,26 @@ WorldResult GameWorld::PreprocessWorld( )
 
     Marker *marker = GetRootNode()->GetFirstMarker( );
     while ( marker )
-	{
-		if ((marker->GetMarkerType() == kMarkerLocator) && (marker->NodeEnabled()))
-		{
+    {
+        if ((marker->GetMarkerType() == kMarkerLocator) && (marker->NodeEnabled()))
+        {
             const auto locator = static_cast<const LocatorMarker *>(marker);
             if (locator->GetLocatorType() == 'spec')
             {
-				const Vector3D direction = marker->GetWorldTransform()[0];
+                const Vector3D direction = marker->GetWorldTransform()[0];
                 azimuth       = Arctan( direction.y, direction.x );
                 altitude      = Arctan( direction.z, Sqrt(direction.x * direction.x + direction.y * direction.y));
                 position = marker->GetWorldPosition();
                 break;
-			}
-		}
+            }
+        }
 
-		marker = marker->GetNextListElement();
-	}
+        marker = marker->GetNextListElement();
+    }
 
     spectatorCamera.SetCameraAzimuth(azimuth);
     spectatorCamera.SetCameraAltitude(altitude);
     spectatorCamera.SetNodePosition(position);
 
-	return (kWorldOkay);
+    return (kWorldOkay);
 }

@@ -12,7 +12,7 @@ using namespace C4;
 
 extern "C"
 {
-	C4_MODULE_EXPORT C4::Application *CreateApplication( );
+    C4_MODULE_EXPORT C4::Application *CreateApplication( );
 }
 
 enum : LocatorType
@@ -37,10 +37,10 @@ private:
     TextWidget      text;
 
 public:
-	Game();
-	~Game();
+    Game();
+    ~Game();
 
-	static World *CreateWorld(const char *name, void *cookie);
+    static World *CreateWorld(const char *name, void *cookie);
 };
 
 #endif // GAME_HPP

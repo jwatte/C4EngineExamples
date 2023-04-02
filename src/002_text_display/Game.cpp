@@ -43,7 +43,7 @@ Game::~Game()
 {
     TheWorldMgr->UnloadWorld( );
 
-	TheWorldMgr->SetWorldCreator(nullptr);
+    TheWorldMgr->SetWorldCreator(nullptr);
 }
 
 World *Game::CreateWorld(const char *name, void *cookie)

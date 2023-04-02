@@ -16,39 +16,39 @@ file( REMOVE_RECURSE ${C4ProgramRootDir}/Import/Application/${CurrentAppName} )
 C4CreateSymlink( ${C4ProgramRootDir}/Import/Application/${CurrentAppName} ${CMAKE_CURRENT_LIST_DIR}/Import )
 
 if (${C4EnableBuildTimeImport})
-	set( ImportDir				"Application/${CurrentAppName}/Game" )
-	set( ImportStringFileName	"gameStrings" )
-	C4AddStringImportTarget( ${C4BinaryDestDir} ${ImportDir} ${ImportStringFileName} C4LatestImportTarget)
+    set( ImportDir                "Application/${CurrentAppName}/Game" )
+    set( ImportStringFileName    "gameStrings" )
+    C4AddStringImportTarget( ${C4BinaryDestDir} ${ImportDir} ${ImportStringFileName} C4LatestImportTarget)
 
-	set( ImportTextureFileName "scribble")
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} ${ImportTextureFileName} C4LatestImportTarget)
+    set( ImportTextureFileName "scribble")
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} ${ImportTextureFileName} C4LatestImportTarget)
 
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "wall_stone_021_diff" C4LatestImportTarget)
-	C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "wall_stone_021_height" C4LatestImportTarget) # Will generate normal, parallax and horizon maps
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "wall_stone_021_diff" C4LatestImportTarget)
+    C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "wall_stone_021_height" C4LatestImportTarget) # Will generate normal, parallax and horizon maps
 
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_diff" C4LatestImportTarget)
-	C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_height" C4LatestImportTarget) # Will generate normal, parallax and horizon maps
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_diff" C4LatestImportTarget)
+    C4AddNormalImportTarget( ${C4BinaryDestDir} ${ImportDir} "Rocks_Hexagons_001_height" C4LatestImportTarget) # Will generate normal, parallax and horizon maps
 
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_left" C4LatestImportTarget)
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_right" C4LatestImportTarget)
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_bottom" C4LatestImportTarget)
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_top" C4LatestImportTarget)
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_front" C4LatestImportTarget)
-	C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_back" C4LatestImportTarget)
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_left" C4LatestImportTarget)
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_right" C4LatestImportTarget)
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_bottom" C4LatestImportTarget)
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_top" C4LatestImportTarget)
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_front" C4LatestImportTarget)
+    C4AddTextureImportTarget( ${C4BinaryDestDir} ${ImportDir} "sky_back" C4LatestImportTarget)
 endif()
 
 install(TARGETS ${CurrentAppName}  LIBRARY  DESTINATION bin )
 
 if ( C4PackUponInstall )
-	# If data gets too big, the pak file may need to be broken up
-	install( CODE "execute_process( COMMAND C4Engine pack Application\; quit WORKING_DIRECTORY ${C4BinaryDestDir})")
-	install( FILES ${C4BinaryDestDir}/Data/Application.pak DESTINATION bin/Data)
+    # If data gets too big, the pak file may need to be broken up
+    install( CODE "execute_process( COMMAND C4Engine pack Application\; quit WORKING_DIRECTORY ${C4BinaryDestDir})")
+    install( FILES ${C4BinaryDestDir}/Data/Application.pak DESTINATION bin/Data)
 else()
-	# Here we need to manually specify each of the Data folders
-	install( DIRECTORY	
-				${CMAKE_CURRENT_LIST_DIR}/Data/Game 
-				${CMAKE_CURRENT_LIST_DIR}/Data/Panel 
-				${CMAKE_CURRENT_LIST_DIR}/Data/World
-			DESTINATION 
-				bin/Data/Application/${CurrentAppName} )
+    # Here we need to manually specify each of the Data folders
+    install( DIRECTORY    
+                ${CMAKE_CURRENT_LIST_DIR}/Data/Game 
+                ${CMAKE_CURRENT_LIST_DIR}/Data/Panel 
+                ${CMAKE_CURRENT_LIST_DIR}/Data/World
+            DESTINATION 
+                bin/Data/Application/${CurrentAppName} )
 endif()

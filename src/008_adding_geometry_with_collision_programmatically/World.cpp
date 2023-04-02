@@ -60,17 +60,17 @@ WorldResult GameWorld::PreprocessWorld( )
 
     // Save our world so we can manipulate it in the world editor if desired
     File file;
-	auto fname = String<>("Data/Application/" APPNAME "/World/simple_physics_prgrm_out.wld");
+    auto fname = String<>("Data/Application/" APPNAME "/World/simple_physics_prgrm_out.wld");
     FileResult fResult = file.OpenFile(fname, kFileCreate);
     if (fResult == kFileOkay)
     {
-		Engine::Report(String<>("Saving to: " ) + fname );
+        Engine::Report(String<>("Saving to: " ) + fname );
         GetRootNode()->PackWorldResource( file, kPackInitialize );
     } 
-	else
-	{
-		Engine::Report(String<>("Could not open file for writing: " ) + fname);
-	}
+    else
+    {
+        Engine::Report(String<>("Could not open file for writing: " ) + fname);
+    }
 
     return (kWorldOkay);
 }

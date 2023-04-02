@@ -10,7 +10,7 @@ class GameWorld : public World
 {
 private:
 
-	SpectatorCamera   spectatorCamera;
+    SpectatorCamera   spectatorCamera;
 
 public:
 

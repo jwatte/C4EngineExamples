@@ -37,9 +37,9 @@ void addBoxesGridToTheWorld( World *world, float width, float spacing, float z_l
                 // Build the primitive (levels and collision data)
                 box->GetObject()->BuildPrimitive( box );
 
-				//auto geometryFlags =box->GetObject()->GetGeometryFlags();
-				//geometryFlags &= ~kGeometryCastShadows;
-				//sbox->GetObject()->SetGeometryFlags(geometryFlags);
+                //auto geometryFlags =box->GetObject()->GetGeometryFlags();
+                //geometryFlags &= ~kGeometryCastShadows;
+                //sbox->GetObject()->SetGeometryFlags(geometryFlags);
 
                 // Add the node to the world
                 world->AddNewNode( box );

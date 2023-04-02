@@ -4,7 +4,7 @@
 MovementAction::MovementAction( ActionType type, uint32 specFlag) :
     Action( type )
 {
-	spectatorFlag = specFlag;
+    spectatorFlag = specFlag;
 }
 
 MovementAction::~MovementAction()
@@ -24,9 +24,9 @@ void MovementAction::HandleEngage( )
 void MovementAction::HandleDisengage( )
 {
     auto world = static_cast<GameWorld *>(TheWorldMgr->GetWorld());
-	if (world)
-	{
+    if (world)
+    {
         auto camera = world->GetSpectatorCamera();
-		camera->SetSpectatorFlags(camera->GetSpectatorFlags() & ~spectatorFlag);
-	}
+        camera->SetSpectatorFlags(camera->GetSpectatorFlags() & ~spectatorFlag);
+    }
 }

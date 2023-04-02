@@ -12,9 +12,9 @@ if (EXISTS ${C4CodeRoot}/EngineCode/C4World.cpp )
 
     add_subdirectory( ${C4CMakeDir}/EngineCode )
 
-	if ( ${C4BuildThe31st} )
-		add_subdirectory( ${C4CMakeDir}/GameCode )
-	endif()
+    if ( ${C4BuildThe31st} )
+        add_subdirectory( ${C4CMakeDir}/GameCode )
+    endif()
 
     add_subdirectory( ${C4CMakeDir}/PluginCode )
 else( )

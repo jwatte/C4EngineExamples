@@ -4,7 +4,7 @@
 #include "C4Engine.h"
 
 StartWindow::StartWindow( ) :
-	Window(APPNAME "/Panel/ImprovedStart" ),
+    Window(APPNAME "/Panel/ImprovedStart" ),
     startButtonObserver     ( this, &StartWindow::HandleStartButtonClick ),
     continueButtonObserver  ( this, &StartWindow::HandleContinueButtonClick ),
     QuitButtonObserver      ( this, &StartWindow::HandleQuitButtonClick )

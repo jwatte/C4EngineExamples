@@ -25,5 +25,5 @@ C4AddLibrary(
     )
 
 if ( ${C4InstallPlugins} )
-	install(TARGETS ${C4CurrentTargetName} DESTINATION bin/${AppDirectory}/Plugins/Tools/Movies )
+    install(TARGETS ${C4CurrentTargetName} DESTINATION bin/${AppDirectory}/Plugins/Tools/Movies )
 endif()

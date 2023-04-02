@@ -102,7 +102,7 @@ void RotateController::PreprocessController()
             // Node is a geometry, so get its object.
             GeometryObject *object = static_cast<const Geometry *>( node )->GetObject();
 
-			Engine::Report(String<>("Setting dynamic flag for: ") + node->GetNodeName());
+            Engine::Report(String<>("Setting dynamic flag for: ") + node->GetNodeName());
             // Set the kGeometryDynamic flag.
             object->SetGeometryFlags( object->GetGeometryFlags() | kGeometryDynamic );
         }
