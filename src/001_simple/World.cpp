@@ -30,8 +30,6 @@ WorldResult GameWorld::PreprocessWorld( )
 	// This will display a message in the console. Access it by pressing "~" on the keyboard
 	Engine::Report(String<>("Pre-processing world!")); 
 
-#pragma message( "Compiling ........" APPNAME )
-
     Engine::Report(String<>( APPNAME ));
 
 	// Set the active camera to our spectator camera
@@ -68,5 +66,5 @@ WorldResult GameWorld::PreprocessWorld( )
     spectatorCamera.SetCameraAltitude(altitude);
     spectatorCamera.SetNodePosition(position);
 
-	return (kWorldOkay);
+    return (kWorldOkay);
 }
